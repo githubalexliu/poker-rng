@@ -13,6 +13,7 @@ root = tk.Tk()
 root.title("Poker RNG")
 root.geometry("150x100")
 root.configure(bg="black")
+root.attributes("-topmost", True)
 
 number_label = tk.Label(root, text="", font=("Helvetica", 24), fg="white", bg="black")
 number_label.pack(pady=20)
