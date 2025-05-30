@@ -5,6 +5,14 @@ import random
 def update_number():
     number = random.randint(1, 100)
     number_label.config(text=str(number))
+    if number > 75:
+        number_label.config(fg="red")
+    elif number > 50:
+        number_label.config(fg="pink")
+    elif number > 25:
+        number_label.config(fg="light green")
+    else:
+        number_label.config(fg="green")
     root.after(2000, update_number)
 
 
