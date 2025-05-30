@@ -22,7 +22,7 @@ def do_move(event):
 
 
 root = tk.Tk()
-# root.overrideredirect(True) # removes title bar
+root.overrideredirect(True) # removes title bar
 root.title("Poker RNG")
 root.geometry("150x70")
 root.configure(bg="black")
