@@ -24,12 +24,12 @@ def do_move(event):
 root = tk.Tk()
 root.overrideredirect(True) # removes title bar
 root.title("Poker RNG")
-root.geometry("150x70")
+root.geometry("70x60")
 root.configure(bg="black")
 root.attributes("-topmost", True)
 
 number_label = tk.Label(root, text="", font=("Helvetica", 24), fg="white", bg="black")
-number_label.pack(pady=20)
+number_label.pack(pady=10)
 
 update_number()
 
