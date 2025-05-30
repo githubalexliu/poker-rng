@@ -8,6 +8,19 @@ def update_number():
     root.after(2000, update_number)
 
 
+def start_move(event):
+    root.x = event.x
+    root.y = event.y
+
+
+def do_move(event):
+    deltax = event.x - root.x
+    deltay = event.y - root.y
+    new_x = root.winfo_x() + deltax
+    new_y = root.winfo_y() + deltay
+    root.geometry(f"+{new_x}+{new_y}")
+
+
 root = tk.Tk()
 # root.overrideredirect(True) # removes title bar
 root.title("Poker RNG")
@@ -20,6 +33,8 @@ number_label.pack(pady=20)
 
 update_number()
 
-root.bind('<space>', lambda event: root.destroy())  
+root.bind('<space>', lambda event: root.destroy())
+root.bind('<Button-1>', start_move)
+root.bind('<B1-Motion>', do_move)
 
 root.mainloop()
