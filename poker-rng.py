@@ -36,7 +36,7 @@ root.geometry("70x60")
 root.configure(bg="black")
 root.attributes("-topmost", True)
 
-number_label = tk.Label(root, text="", font=("Helvetica", 24), fg="white", bg="black")
+number_label = tk.Label(root, text="", font=("Helvetica", 24), bg="black")
 number_label.pack(pady=10)
 
 update_number()
